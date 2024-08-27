@@ -1,0 +1,13 @@
+{
+    "启动": {
+        "next": [
+            "检查主界面"
+        ]
+    },
+    "检查主界面": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "empty.png"
+        ]
+    }
+}

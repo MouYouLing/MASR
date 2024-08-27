@@ -10,7 +10,7 @@
             "win32": {
                 "method": "Search",
                 "class_name": ".*",
-                "window_name": "Visual Studio"
+                "window_name": "崩坏：星穹铁道"
             }
         }
     ],
@@ -31,30 +31,43 @@
     ],
     "task": [
         {
-            "name": "普通任务",
-            "entry": "MyTask1"
+            "name": "启动",
+            "entry": "启动"
         },
         {
-            "name": "选项任务",
-            "entry": "MyTask2",
+            "name": "派遣委托",
+            "entry": "派遣"
+        },
+        {
+            "name": "刷开拓力",
+            "entry": "开拓力",
             "option": [
-                "任务选项1"
+                "使用道具",
+                "关卡选择",
+                "花萼次数",
+                "优先使用沉浸器",
+                "刷取次数",
+                "使用燃料"
             ]
         },
         {
-            "name": "参数任务",
-            "entry": "MyTask3",
-            "option": [
-                "任务选项1"
-            ],
-            "param": {}
+            "name": "领取奖励",
+            "entry": "领取"
         }
     ],
     "option": {
-        "任务选项1": {
+        "使用道具": {
             "cases": [
                 {
-                    "name": "文本1",
+                    "name": "自动木人桩",
+                    "param": {}
+                }
+            ]
+        },
+        "关卡选择": {
+            "cases": [
+                {
+                    "name": "信用点",
                     "param": {
                         "OcrTask": {
                             "text": "文本1"
@@ -62,10 +75,82 @@
                     }
                 },
                 {
-                    "name": "文本2",
+                    "name": "光锥",
                     "param": {
                         "OcrTask": {
                             "text": "文本2"
+                        }
+                    }
+                },
+                {
+                    "name": "角色经验",
+                    "param": {
+                        "OcrTask": {
+                            "text": "文本2"
+                        }
+                    }
+                }
+            ]
+        },
+        "刷取次数": {
+            "cases": [
+                {
+                    "name": "全部",
+                    "param": {
+                        "次数": {
+                            "enable": false
+                        }
+                    }
+                },
+                {
+                    "name": "1",
+                    "param": {
+                        "次数": {
+                            "expected": "1"
+                        }
+                    }
+                },
+                {
+                    "name": "2",
+                    "param": {
+                        "次数": {
+                            "expected": "2"
+                        }
+                    }
+                },
+                {
+                    "name": "3",
+                    "param": {
+                        "次数": {
+                            "expected": "3"
+                        }
+                    }
+                },
+                {
+                    "name": "4",
+                    "param": {
+                        "次数": {
+                            "expected": "4"
+                        }
+                    }
+                }
+            ]
+        },
+        "使用浓缩": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "param": {
+                        "Use": {
+                            "enable": true
+                        }
+                    }
+                },
+                {
+                    "name": "Yes",
+                    "param": {
+                        "Use": {
+                            "enable": false
                         }
                     }
                 }
