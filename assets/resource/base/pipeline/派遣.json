@@ -18,7 +18,8 @@
             270,
             700,
             270
-        ]
+        ],
+        "post_delay": 1000
     },
     "领取委托": {
         "recognition": "OCR",
@@ -31,7 +32,11 @@
     "再次派遣": {
         "recognition": "OCR",
         "expected": "再次派遣",
-        "action": "Click"
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "关闭界面"
+        ]
     },
     "是否委托界面": {
         "recognition": "OCR",
@@ -49,7 +54,11 @@
     },
     "是否完成委托": {
         "recognition": "OCR",
-        "expected": "再次派遣",
-        "inverse": true
+        "expected": "一键领取",
+        "inverse": true,
+        "post_delay": 2000,
+        "next": [
+            "关闭界面"
+        ]
     }
 }
