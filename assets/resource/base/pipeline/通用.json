@@ -1,0 +1,34 @@
+{
+    "打开手机": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "phone720.png",
+            "phone1080.png"
+        ],
+        "roi": [
+            0,
+            0,
+            100,
+            150
+        ],
+        "green_mask": true,
+        "times_limit": 3,
+        "action": "Click"
+    },
+    "关闭界面": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "close720.png",
+            "close1080.png"
+        ],
+        "green_mask": true,
+        "action": "Click",
+        "roi": [
+            1170,
+            0,
+            750,
+            100
+        ]
+    }
+}

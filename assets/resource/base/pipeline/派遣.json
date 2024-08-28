@@ -1,3 +1,55 @@
 {
-    "派遣": {}
+    "派遣": {
+        "next": [
+            "是否委托界面",
+            "打开委托",
+            "打开手机",
+            "关闭界面"
+        ],
+        "times_limit": 3
+    },
+    "打开委托": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "委托",
+        "action": "Click",
+        "roi": [
+            1070,
+            270,
+            700,
+            270
+        ]
+    },
+    "领取委托": {
+        "recognition": "OCR",
+        "expected": "一键领取",
+        "action": "Click",
+        "next": [
+            "再次派遣"
+        ]
+    },
+    "再次派遣": {
+        "recognition": "OCR",
+        "expected": "再次派遣",
+        "action": "Click"
+    },
+    "是否委托界面": {
+        "recognition": "OCR",
+        "expected": "委托",
+        "roi": [
+            0,
+            0,
+            200,
+            150
+        ],
+        "next": [
+            "领取委托",
+            "是否完成委托"
+        ]
+    },
+    "是否完成委托": {
+        "recognition": "OCR",
+        "expected": "再次派遣",
+        "inverse": true
+    }
 }
