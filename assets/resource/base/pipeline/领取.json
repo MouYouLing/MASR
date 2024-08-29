@@ -1,3 +1,88 @@
 {
-    "领取": {}
+    "领取": {
+        "next": [
+            "切换到领取",
+            "打开指南",
+            "打开手机",
+            "关闭并结束任务"
+        ]
+    },
+    "切换到领取": {
+        "template": [
+            "daily_no_selected_720.png",
+            "daily_selected_720.png",
+            "daily_no_select_1080.png",
+            "daily_selected_1080.png"
+        ],
+        "recognition": "TemplateMatch",
+        "next": [
+            "领任务",
+            "领奖励",
+            "关闭并结束任务"
+        ],
+        "roi": [
+            150,
+            85,
+            175,
+            125
+        ],
+        "action": "Click",
+        "post_delay": 1500,
+        "threshold": 0.6
+    },
+    "领任务": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            150,
+            550,
+            300,
+            350
+        ],
+        "next": [
+            "领任务",
+            "领奖励",
+            "关闭并结束任务"
+        ],
+        "action": "Click"
+    },
+    "领奖励": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "award_taking_720.png",
+            "award_taking_1080.png"
+        ],
+        "roi": [
+            360,
+            160,
+            1400,
+            200
+        ],
+        "next": [
+            "点击空白关闭"
+        ],
+        "action": "Click",
+        "threshold": 0.5
+    },
+    "点击空白关闭": {
+        "recognition": "OCR",
+        "expected": "点击空白",
+        "action": "Click",
+        "next": [
+            "领奖励",
+            "关闭并结束任务"
+        ],
+        "target_offset": [
+            -100,
+            0,
+            0,
+            0
+        ],
+        "roi": [
+            550,
+            590,
+            530,
+            350
+        ]
+    }
 }
