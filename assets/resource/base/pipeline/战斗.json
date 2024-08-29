@@ -1,3 +1,42 @@
 {
-    "开拓力": {}
+    "开拓力": {
+        "next": [
+            "切换到战斗",
+            "打开指南",
+            "打开手机",
+            "关闭并结束任务"
+        ]
+    },
+    "打开指南": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "指南",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            750,
+            590,
+            520,
+            440
+        ]
+    },
+    "切换到战斗": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "battle_no_selected_720.png",
+            "battle_selected_720.png",
+            "battle_no_selected_1080.png",
+            "battle_selected_1080.png"
+        ],
+        "next": [],
+        "roi": [
+            235,
+            85,
+            235,
+            125
+        ],
+        "action": "Click",
+        "threshold": 0.6,
+        "post_delay": 1500
+    }
 }
