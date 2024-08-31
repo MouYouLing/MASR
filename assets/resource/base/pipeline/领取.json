@@ -18,7 +18,7 @@
         "next": [
             "领任务",
             "领奖励",
-            "关闭并结束任务"
+            "关闭并回到上级"
         ],
         "roi": [
             150,
@@ -43,7 +43,7 @@
         "next": [
             "领任务",
             "领奖励",
-            "关闭并结束任务"
+            "关闭并回到上级"
         ],
         "action": "Click"
     },
@@ -74,7 +74,7 @@
         "action": "Click",
         "next": [
             "领奖励",
-            "关闭并结束任务"
+            "关闭并回到上级"
         ],
         "target_offset": [
             -100,
@@ -88,5 +88,45 @@
             530,
             350
         ]
+    },
+    "关闭并回到上级": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "close720.png",
+            "close1080.png"
+        ],
+        "green_mask": true,
+        "action": "Click",
+        "roi": [
+            1170,
+            0,
+            750,
+            100
+        ],
+        "post_delay": 1000,
+        "next": [
+            "邮件"
+        ]
+    },
+    "邮件": {
+        "next": [
+            "打开邮箱",
+            "打开手机",
+            "关闭界面"
+        ]
+    },
+    "打开邮箱": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "mail_720.png",
+            "mail_1080.png"
+        ],
+        "green_mask": true,
+        "next": [],
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "领取邮件": {
+        "next": []
     }
 }
