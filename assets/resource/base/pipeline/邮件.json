@@ -1,0 +1,81 @@
+{
+    "邮件": {
+        "next": [
+            "是否邮箱界面",
+            "打开邮箱",
+            "打开手机",
+            "关闭界面"
+        ]
+    },
+    "是否邮箱界面": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "mail_page_720.png",
+            "mail_page_1080.png"
+        ],
+        "green_mask": true,
+        "roi": [
+            0,
+            0,
+            130,
+            100
+        ],
+        "next": [
+            "领取邮件"
+        ]
+    },
+    "打开邮箱": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "mail_720.png",
+            "mail_1080.png"
+        ],
+        "green_mask": true,
+        "threshold": 0.6,
+        "action": "Click",
+        "post_delay": 1500,
+        "roi": [
+            1190,
+            196,
+            715,
+            205
+        ]
+    },
+    "领取邮件": {
+        "next": [
+            "点击空白关闭并返回",
+            "关闭界面"
+        ],
+        "roi": [
+            310,
+            640,
+            360,
+            380
+        ],
+        "recognition": "OCR",
+        "expected": "全部领取",
+        "action": "Click",
+        "post_delay": 1000
+    },
+    "点击空白关闭并返回": {
+        "recognition": "OCR",
+        "expected": "点击空白",
+        "action": "Click",
+        "next": [
+            "关闭界面"
+        ],
+        "target_offset": [
+            -100,
+            0,
+            0,
+            0
+        ],
+        "roi": [
+            550,
+            590,
+            530,
+            350
+        ]
+    }
+}

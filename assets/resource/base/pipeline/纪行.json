@@ -1,0 +1,113 @@
+{
+    "无名勋礼": {
+        "next": [
+            "是否纪行界面",
+            "打开纪行",
+            "打开手机",
+            "关闭并返回"
+        ]
+    },
+    "打开纪行": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "无名勋礼",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            860,
+            480,
+            570,
+            380
+        ]
+    },
+    "是否纪行界面": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "price_720.png",
+            "price_1080.png"
+        ],
+        "next": [
+            "切换到纪行任务"
+        ],
+        "green_mask": true,
+        "roi": [
+            0,
+            0,
+            120,
+            100
+        ]
+    },
+    "切换到纪行任务": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "task_selected_720.png",
+            "task_no_selected_720.png",
+            "task_selected_1080.png",
+            "task_no_selected_1080.png"
+        ],
+        "action": "Click",
+        "green_mask": true,
+        "roi": [
+            30,
+            170,
+            100,
+            190
+        ],
+        "next": [
+            "领取纪行任务",
+            "切换到纪行奖励"
+        ],
+        "post_delay": 1000
+    },
+    "领取纪行任务": {
+        "recognition": "OCR",
+        "expected": "一键领取",
+        "roi": [
+            1000,
+            655,
+            710,
+            390
+        ],
+        "action": "Click",
+        "next": [
+            "切换到纪行奖励"
+        ],
+        "post_delay": 3000
+    },
+    "切换到纪行奖励": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "price_no_selected_720.png",
+            "price_selected_720.png",
+            "price_no_selected_1080.png",
+            "price_selected_1080.png"
+        ],
+        "roi": [
+            30,
+            85,
+            105,
+            145
+        ],
+        "action": "Click",
+        "next": [
+            "领取纪行奖励",
+            "关闭界面"
+        ],
+        "green_mask": true,
+        "post_delay": 1000
+    },
+    "领取纪行奖励": {
+        "recognition": "OCR",
+        "expected": "一键领取",
+        "action": "Click",
+        "next": [
+            "点击空白关闭并返回"
+        ],
+        "roi": [
+            820,
+            650,
+            575,
+            390
+        ]
+    }
+}
