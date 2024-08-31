@@ -28,7 +28,8 @@
         ],
         "action": "Click",
         "post_delay": 1500,
-        "threshold": 0.6
+        "threshold": 0.6,
+        "green_mask": true
     },
     "领任务": {
         "recognition": "OCR",
@@ -50,7 +51,9 @@
         "recognition": "TemplateMatch",
         "template": [
             "award_taking_720.png",
-            "award_taking_1080.png"
+            "award_taking_1080.png",
+            "award_2_720.png",
+            "award_2_1080.png"
         ],
         "roi": [
             360,
@@ -62,7 +65,8 @@
             "点击空白关闭"
         ],
         "action": "Click",
-        "threshold": 0.5
+        "threshold": 0.5,
+        "green_mask": true
     },
     "点击空白关闭": {
         "recognition": "OCR",
