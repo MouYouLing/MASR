@@ -32,5 +32,22 @@
             100
         ],
         "post_delay": 1000
+    },
+    "关闭并返回": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "close720.png",
+            "close1080.png"
+        ],
+        "green_mask": true,
+        "action": "Click",
+        "roi": [
+            1170,
+            0,
+            750,
+            100
+        ],
+        "post_delay": 1000
     }
 }

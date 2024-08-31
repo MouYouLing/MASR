@@ -1,10 +1,10 @@
 {
     "开拓力": {
         "next": [
-            "切换到战斗",
+            "是否指南界面",
             "打开指南",
             "打开手机",
-            "关闭界面"
+            "关闭并返回"
         ]
     },
     "打开指南": {
@@ -19,6 +19,17 @@
             520,
             440
         ]
+    },
+    "是否指南界面": {
+        "next": [
+            "切换到战斗"
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "guide720.png",
+            "guide1080.png"
+        ],
+        "green_mask": true
     },
     "切换到战斗": {
         "recognition": "TemplateMatch",

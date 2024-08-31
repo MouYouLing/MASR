@@ -1,11 +1,22 @@
 {
     "领取": {
         "next": [
-            "切换到领取",
+            "判断指南界面",
             "打开指南",
             "打开手机",
-            "关闭界面"
+            "关闭并返回"
         ]
+    },
+    "判断指南界面": {
+        "next": [
+            "切换到领取"
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "guide720.png",
+            "guide1080.png"
+        ],
+        "green_mask": true
     },
     "切换到领取": {
         "template": [
@@ -18,7 +29,7 @@
         "next": [
             "领任务",
             "领奖励",
-            "关闭并回到上级"
+            "关闭界面"
         ],
         "roi": [
             150,
@@ -43,7 +54,7 @@
         "next": [
             "领任务",
             "领奖励",
-            "关闭并回到上级"
+            "关闭界面"
         ],
         "action": "Click"
     },
@@ -65,7 +76,6 @@
             "点击空白关闭"
         ],
         "action": "Click",
-        "threshold": 0.5,
         "green_mask": true
     },
     "点击空白关闭": {
@@ -74,7 +84,7 @@
         "action": "Click",
         "next": [
             "领奖励",
-            "关闭并回到上级"
+            "关闭界面"
         ],
         "target_offset": [
             -100,
@@ -88,45 +98,5 @@
             530,
             350
         ]
-    },
-    "关闭并回到上级": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "close720.png",
-            "close1080.png"
-        ],
-        "green_mask": true,
-        "action": "Click",
-        "roi": [
-            1170,
-            0,
-            750,
-            100
-        ],
-        "post_delay": 1000,
-        "next": [
-            "邮件"
-        ]
-    },
-    "邮件": {
-        "next": [
-            "打开邮箱",
-            "打开手机",
-            "关闭界面"
-        ]
-    },
-    "打开邮箱": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "mail_720.png",
-            "mail_1080.png"
-        ],
-        "green_mask": true,
-        "next": [],
-        "action": "Click",
-        "post_delay": 1500
-    },
-    "领取邮件": {
-        "next": []
     }
 }

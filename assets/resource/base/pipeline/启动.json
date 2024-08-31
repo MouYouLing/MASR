@@ -2,6 +2,7 @@
     "启动": {
         "next": [
             "检查主界面",
+            "关闭并返回",
             "进入游戏",
             "开始游戏",
             "接受协议",
@@ -86,12 +87,12 @@
         "is_sub": true,
         "action": "StartApp",
         "package": "com.miHoYo.hkrpg",
-        "post_delay": 20000
+        "post_delay": 8000
     },
     "登录中": {
         "is_sub": true,
         "recognition": "OCR",
-        "expected": "CNPRODAndroid",
+        "expected": "PRODAndroid",
         "post_delay": 2000,
         "roi": [
             25,
@@ -100,8 +101,8 @@
             390
         ],
         "replace": [
-            "CNPR0D",
-            "CNPROD"
+            "PR0D",
+            "PROD"
         ]
     },
     "加载中": {
