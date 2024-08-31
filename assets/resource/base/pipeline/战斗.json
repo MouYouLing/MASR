@@ -4,7 +4,7 @@
             "切换到战斗",
             "打开指南",
             "打开手机",
-            "关闭并结束任务"
+            "关闭界面"
         ]
     },
     "打开指南": {
@@ -37,6 +37,7 @@
         ],
         "action": "Click",
         "threshold": 0.6,
-        "post_delay": 1500
+        "post_delay": 1500,
+        "green_mask": true
     }
 }
