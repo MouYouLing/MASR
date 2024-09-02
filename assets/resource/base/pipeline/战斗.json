@@ -39,7 +39,9 @@
             "battle_no_selected_1080.png",
             "battle_selected_1080.png"
         ],
-        "next": [],
+        "next": [
+            "切换关卡"
+        ],
         "roi": [
             235,
             85,
@@ -47,8 +49,10 @@
             125
         ],
         "action": "Click",
-        "threshold": 0.6,
         "post_delay": 1500,
         "green_mask": true
+    },
+    "切换关卡": {
+        "next": []
     }
 }
