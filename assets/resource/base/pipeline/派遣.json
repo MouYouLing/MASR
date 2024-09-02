@@ -27,7 +27,8 @@
         "action": "Click",
         "next": [
             "再次派遣"
-        ]
+        ],
+        "post_wait_freezes": 500
     },
     "再次派遣": {
         "recognition": "OCR",
