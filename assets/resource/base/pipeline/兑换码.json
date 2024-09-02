@@ -1,0 +1,73 @@
+{
+    "兑换码": {
+        "next": [
+            "是否兑换码",
+            "打开兑换码",
+            "打开手机",
+            "关闭并返回"
+        ]
+    },
+    "是否兑换码": {
+        "roi": [
+            250,
+            325,
+            365,
+            240
+        ],
+        "recognition": "OCR",
+        "expected": "请输入兑换码",
+        "next": [
+            "输入兑换码"
+        ]
+    },
+    "打开省略号": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "more_720.png",
+            "more_1080.png"
+        ],
+        "roi": [
+            1100,
+            65,
+            665,
+            95
+        ],
+        "green_mask": true,
+        "next": [
+            "打开兑换码"
+        ],
+        "action": "Click"
+    },
+    "打开兑换码": {
+        "recognition": "OCR",
+        "expected": "兑换码",
+        "roi": [
+            920,
+            210,
+            700,
+            180
+        ],
+        "action": "Click",
+        "next": [
+            "输入兑换码"
+        ]
+    },
+    "输入兑换码": {
+        "action": "InputText",
+        "input_text": "",
+        "next": [
+            "兑换"
+        ]
+    },
+    "兑换": {
+        "next": [
+            "兑换结果"
+        ]
+    },
+    "兑换结果": {
+        "next": [
+            "关闭界面"
+        ]
+    }
+}
