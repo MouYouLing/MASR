@@ -15,7 +15,7 @@
 
 TODO:
 
-- 打包为Release
+- 打包为Release <https://github.com/MouYouLing/MASR/releases>
 - 撰写使用说明
 - GUI使用
 
@@ -28,17 +28,23 @@ TODO:
     - [x] 一键收取并再次派遣
     - [ ] 自动选人
 - [ ] 刷开拓力
-    - [x] 识别索引界面
-    - [ ] 识别材料
-    - [ ] 挑战次数
-    - [ ] 识别战斗状态并等待
-    - [ ] 再次战斗或退出
+    - [ ] 拟造花萼（金）
+    - [ ] 拟造花萼（赤）
+    - [ ] 凝滞虚影
+    - [ ] 历战余响
+    - [ ] 侵蚀隧洞
+    - [ ] 饰品提取
 - [x] 领取奖励
     - [x] 每日任务及每日奖励
     - [ ] 自动兑换码
     - [x] 领取邮件
     - [x] 领取无名勋礼
     - [ ] 领取列车补给凭证
+
+## 注意事项
+
+- 开发和测试环境为蓝叠模拟器、1920*1080分辨率、240DPI，其他模拟器如有问题，可提交反馈
+- 请尽量保证实际运行分辨率不低于1280*720，并保持显示比例为16:9
 
 ## 生态共建
 
@@ -52,5 +58,11 @@ MAA 正计划建设为一类项目，而非舟的单一软件。
 
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 
-MAA！永远的神！走过路过别忘了去[MaaFramework](https://github.com/MaaXYZ/MaaFramework)项目页给一个Star！
+### 开发者
+
+感谢以下开发者对 MASR 作出的贡献：
+
+<a href="https://github.com/MouYouLing/MASR/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MouYouLing/MASR&max=1000" />
+</a>
 
