@@ -70,9 +70,18 @@
         ],
         "action": "Click",
         "next": [
+            "纪行等级提升",
+            "切换到纪行奖励"
+        ]
+    },
+    "纪行等级提升": {
+        "recognition": "OCR",
+        "expected": "等级提升",
+        "action": "Click",
+        "next": [
             "切换到纪行奖励"
         ],
-        "post_delay": 3000
+        "post_wait_freezes": 500
     },
     "切换到纪行奖励": {
         "recognition": "TemplateMatch",
@@ -94,7 +103,7 @@
             "关闭界面"
         ],
         "green_mask": true,
-        "post_delay": 1000
+        "post_wait_freezes": 500
     },
     "领取纪行奖励": {
         "recognition": "OCR",
