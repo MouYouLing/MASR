@@ -1,23 +1,317 @@
 {
     "切换到花萼金": {
-        "is_sub": true
+        "is_sub": true,
+        "next": [
+            "点击花萼金",
+            "左栏向下滑"
+        ]
+    },
+    "点击花萼金": {
+        "recognition": "OCR",
+        "expected": "经验材料|信用点",
+        "roi": [
+            100,
+            150,
+            400,
+            830
+        ],
+        "action": "Click"
     },
     "切换贝洛伯格": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Belobog_no_selected_720.png",
+            "Belobog_selected_720.png",
+            "Belobog_no_selected_1080.png",
+            "Belobog_selected_1080.png"
+        ],
+        "action": "Click",
+        "roi": [
+            450,
+            175,
+            1300,
+            180
+        ],
         "is_sub": true
     },
     "切换仙舟罗浮": {
-        "is_sub": true
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "Luofu_no_selected_720.png",
+            "Luofu_selected_720.png",
+            "Luofu_no_selected_1080.png",
+            "Luofu_selected_1080.png"
+        ],
+        "action": "Click",
+        "roi": [
+            450,
+            175,
+            1300,
+            180
+        ]
     },
     "切换匹诺康尼": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "Penacony_no_seleted_720.png",
+            "Penacony_seleted_720.png",
+            "Penacony_no_seleted_1080.png",
+            "Penacony_seleted_1080.png"
+        ],
+        "action": "Click",
+        "roi": [
+            450,
+            175,
+            1300,
+            180
+        ]
+    },
+    "前往角色经验": {
+        "roi": [
+            550,
+            270,
+            780,
+            740
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "locate_720.png",
+            "locate_1080.png"
+        ],
+        "index": 1,
+        "action": "Swipe",
+        "end": true,
+        "end_offset": [
+            0,
+            200,
+            0,
+            0
+        ],
+        "duration": 300,
+        "post_wait_freezes": 100,
+        "next": [
+            "传送角色经验"
+        ]
+    },
+    "前往武器经验": {
+        "next": [
+            "传送武器经验"
+        ]
+    },
+    "前往信用点": {
+        "roi": [
+            550,
+            270,
+            780,
+            740
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "locate_720.png",
+            "locate_1080.png"
+        ],
+        "index": 1,
+        "action": "Swipe",
+        "end": true,
+        "end_offset": [
+            0,
+            -200,
+            0,
+            0
+        ],
+        "duration": 300,
+        "post_wait_freezes": 100,
+        "next": [
+            "传送信用点"
+        ]
+    },
+    "传送角色经验": {
+        "recognition": "OCR",
+        "expected": "回忆之蕾",
+        "roi": [
+            550,
+            270,
+            780,
+            740
+        ],
+        "target_offset": [
+            456,
+            70,
+            0,
+            0
+        ],
+        "action": "Click",
+        "next": [
+            "花萼挑战准备"
+        ]
+    },
+    "传送武器经验": {
+        "recognition": "OCR",
+        "expected": "以太之蕾",
+        "roi": [
+            550,
+            270,
+            780,
+            740
+        ],
+        "target_offset": [
+            456,
+            70,
+            0,
+            0
+        ],
+        "action": "Click",
+        "next": [
+            "花萼挑战准备"
+        ]
+    },
+    "传送信用点": {
+        "recognition": "OCR",
+        "expected": "藏珍之蕾",
+        "roi": [
+            550,
+            270,
+            780,
+            740
+        ],
+        "target_offset": [
+            456,
+            70,
+            0,
+            0
+        ],
+        "action": "Click",
+        "next": [
+            "花萼挑战准备"
+        ]
+    },
+    "花萼金向左滑": {
         "is_sub": true
     },
-    "花萼金向上滑": {
+    "花萼金向右滑": {
         "is_sub": true
     },
-    "花萼金向下滑": {
-        "is_sub": true
+    "花萼挑战准备": {
+        "next": [
+            "是否花萼界面",
+            "传送中"
+        ]
     },
-    "前往角色经验": {},
-    "前往武器经验": {},
-    "前往信用点": {}
+    "是否花萼界面": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "plus_720.png",
+            "plus_max_720.png",
+            "minus_720.png",
+            "minus_min_720.png",
+            "plus_1080.png",
+            "plus_max_1080.png",
+            "minus_1080.png",
+            "minus_min_1080.png"
+        ],
+        "green_mask": true,
+        "roi": [
+            800,
+            565,
+            1100,
+            360
+        ],
+        "threshold": 0.8,
+        "next": [
+            "花萼次数"
+        ]
+    },
+    "花萼次数": {
+        "next": [
+            "目标次数",
+            "是否次数最小",
+            "减小次数"
+        ]
+    },
+    "是否次数最小": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "minus_min_720.png",
+            "minus_min_1080.png"
+        ],
+        "roi": [
+            800,
+            565,
+            1100,
+            360
+        ],
+        "threshold": 0.8,
+        "green_mask": true,
+        "next": [
+            "目标次数",
+            "增大次数"
+        ],
+        "times_limit": 7,
+        "post_delay": 150
+    },
+    "减小次数": {
+        "is_sub": true,
+        "roi": [
+            800,
+            565,
+            1100,
+            360
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "minus_720.png",
+            "minus_1080.png"
+        ],
+        "threshold": 0.8,
+        "green_mask": true,
+        "action": "Click",
+        "post_delay": 150
+    },
+    "增大次数": {
+        "is_sub": true,
+        "roi": [
+            800,
+            565,
+            1100,
+            360
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "plus_720.png",
+            "plus_1080.png"
+        ],
+        "threshold": 0.8,
+        "green_mask": true,
+        "action": "Click",
+        "post_delay": 150
+    },
+    "目标次数": {
+        "recognition": "OCR",
+        "expected": "6",
+        "next": [
+            "准备挑战"
+        ],
+        "roi": [
+            950,
+            545,
+            150,
+            42
+        ],
+        "post_delay": 150
+    },
+    "目标次数1080": {
+        "recognition": "OCR",
+        "expected": "6",
+        "next": [
+            "准备挑战"
+        ],
+        "roi": [
+            1475,
+            830,
+            160,
+            48
+        ]
+    }
 }
