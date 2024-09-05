@@ -1,0 +1,196 @@
+{
+    "左栏向上滑": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "凝滞虚影",
+        "action": "Swipe",
+        "post_wait_freezes": 500,
+        "end": true,
+        "end_offset": [
+            0,
+            -300,
+            0,
+            0
+        ],
+        "roi": [
+            100,
+            150,
+            400,
+            830
+        ],
+        "duration": 300
+    },
+    "左栏向下滑": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "凝滞虚影",
+        "action": "Swipe",
+        "post_wait_freezes": 500,
+        "end": true,
+        "end_offset": [
+            0,
+            300,
+            0,
+            0
+        ],
+        "roi": [
+            100,
+            150,
+            400,
+            830
+        ],
+        "duration": 300
+    },
+    "准备挑战": {
+        "recognition": "OCR",
+        "expected": "挑战$",
+        "roi": [
+            960,
+            630,
+            860,
+            400
+        ],
+        "action": "Click",
+        "next": [
+            "切换编队"
+        ]
+    },
+    "切换编队": {
+        "next": [
+            "开始挑战"
+        ]
+    },
+    "开始挑战": {
+        "recognition": "OCR",
+        "expected": "开始挑战",
+        "action": "Click",
+        "roi": [
+            980,
+            635,
+            730,
+            390
+        ],
+        "next": [
+            "是否没开自动战斗",
+            "等待战斗中",
+            "结束挑战"
+        ]
+    },
+    "是否没开自动战斗": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "auto_no_720.png",
+            "auto_no_1080.png"
+        ],
+        "roi": [
+            1000,
+            10,
+            810,
+            85
+        ],
+        "green_mask": true,
+        "threshold": 0.83,
+        "action": "Click"
+    },
+    "是否没开倍速战斗": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "1x_720.png"
+        ],
+        "roi": [
+            1000,
+            10,
+            810,
+            85
+        ],
+        "green_mask": true,
+        "threshold": 0.55
+    },
+    "开启自动战斗": {},
+    "开启倍速战斗": {},
+    "等待战斗中": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "退出关卡",
+        "inverse": true,
+        "roi": [
+            340,
+            580,
+            460,
+            375
+        ],
+        "post_wait_freezes": 500
+    },
+    "继续挑战判定": {
+        "next": []
+    },
+    "结束挑战": {
+        "next": [
+            "继续挑战判定"
+        ]
+    },
+    "再来一次": {
+        "next": [
+            "是否补充开拓力窗口",
+            "再来一次"
+        ]
+    },
+    "再来一次2": {
+        "next": [
+            "再来一次3",
+            "结束挑战"
+        ]
+    },
+    "再来一次3": {
+        "next": [
+            "再来一次4",
+            "结束挑战"
+        ]
+    },
+    "再来一次4": {
+        "next": [
+            "再来一次5",
+            "结束挑战"
+        ]
+    },
+    "再来一次5": {
+        "next": [
+            "再来一次6",
+            "结束挑战"
+        ]
+    },
+    "再来一次6": {
+        "next": [
+            "结束挑战"
+        ]
+    },
+    "余响次数不足": {},
+    "是否补充开拓力窗口": {},
+    "关闭补充开拓力窗口": {},
+    "使用燃料": {},
+    "使用星琼": {},
+    "传送中": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "UID",
+        "post_delay": 2000,
+        "roi": [
+            0,
+            680,
+            240,
+            400
+        ],
+        "replace": [
+            [
+                "U1D",
+                "UID"
+            ],
+            [
+                "UlD",
+                "UID"
+            ]
+        ]
+    }
+}
