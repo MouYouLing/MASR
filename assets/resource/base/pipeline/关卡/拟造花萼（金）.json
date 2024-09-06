@@ -69,60 +69,91 @@
         ]
     },
     "前往角色经验": {
+        "recognition": "OCR",
+        "expected": "回忆之蕾",
         "roi": [
             550,
             270,
             780,
             740
         ],
+        "next": [
+            "是否可传送角色经验",
+            "右栏向下滑"
+        ]
+    },
+    "前往武器经验": {
+        "recognition": "OCR",
+        "expected": "以太之蕾",
+        "roi": [
+            550,
+            270,
+            780,
+            740
+        ],
+        "next": [
+            "是否可传送武器经验",
+            "右栏向下滑"
+        ]
+    },
+    "前往信用点": {
+        "recognition": "OCR",
+        "expected": "藏珍之蕾",
+        "roi": [
+            550,
+            270,
+            780,
+            740
+        ],
+        "next": [
+            "是否可传送信用点",
+            "右栏向上滑"
+        ]
+    },
+    "是否可传送角色经验": {
         "recognition": "TemplateMatch",
         "template": [
-            "locate_720.png",
-            "locate_1080.png"
+            "材料\\漫游指南_720.png",
+            "材料\\冒险记录_720.png"
         ],
-        "index": 1,
-        "action": "Swipe",
-        "end": true,
-        "end_offset": [
-            0,
-            200,
-            0,
-            0
+        "roi": [
+            550,
+            270,
+            780,
+            740
         ],
-        "duration": 300,
-        "post_wait_freezes": 100,
         "next": [
             "传送角色经验"
         ]
     },
-    "前往武器经验": {
-        "next": [
-            "传送武器经验"
-        ]
-    },
-    "前往信用点": {
+    "是否可传送武器经验": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "材料\\浓缩以太_720.png",
+            "材料\\提纯以太_720.png",
+            "材料\\稀薄以太_720.png"
+        ],
         "roi": [
             550,
             270,
             780,
             740
         ],
+        "next": [
+            "传送武器经验"
+        ]
+    },
+    "是否可传送信用点": {
         "recognition": "TemplateMatch",
         "template": [
-            "locate_720.png",
-            "locate_1080.png"
+            "材料\\信用点_720.png"
         ],
-        "index": 1,
-        "action": "Swipe",
-        "end": true,
-        "end_offset": [
-            0,
-            -200,
-            0,
-            0
+        "roi": [
+            550,
+            270,
+            780,
+            740
         ],
-        "duration": 300,
-        "post_wait_freezes": 100,
         "next": [
             "传送信用点"
         ]
@@ -193,6 +224,56 @@
     "花萼金向右滑": {
         "is_sub": true
     },
+    "右栏向上滑": {
+        "is_sub": true,
+        "roi": [
+            550,
+            270,
+            780,
+            740
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "locate_720.png",
+            "locate_1080.png"
+        ],
+        "index": 1,
+        "action": "Swipe",
+        "end": true,
+        "end_offset": [
+            0,
+            -200,
+            0,
+            0
+        ],
+        "duration": 300,
+        "post_wait_freezes": 300
+    },
+    "右栏向下滑": {
+        "is_sub": true,
+        "roi": [
+            550,
+            270,
+            780,
+            740
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "locate_720.png",
+            "locate_1080.png"
+        ],
+        "index": 1,
+        "action": "Swipe",
+        "end": true,
+        "end_offset": [
+            0,
+            200,
+            0,
+            0
+        ],
+        "duration": 300,
+        "post_wait_freezes": 300
+    },
     "花萼挑战准备": {
         "next": [
             "是否花萼界面",
@@ -225,7 +306,7 @@
     },
     "花萼次数": {
         "next": [
-            "目标次数",
+            "花萼目标次数",
             "是否次数最小",
             "减小次数"
         ]
@@ -245,7 +326,7 @@
         "threshold": 0.8,
         "green_mask": true,
         "next": [
-            "目标次数",
+            "花萼目标次数",
             "增大次数"
         ],
         "times_limit": 7,
@@ -287,7 +368,7 @@
         "action": "Click",
         "post_delay": 150
     },
-    "目标次数": {
+    "花萼目标次数": {
         "recognition": "OCR",
         "expected": "6",
         "next": [
@@ -301,7 +382,7 @@
         ],
         "post_delay": 150
     },
-    "目标次数1080": {
+    "花萼目标次数1080": {
         "recognition": "OCR",
         "expected": "6",
         "next": [
