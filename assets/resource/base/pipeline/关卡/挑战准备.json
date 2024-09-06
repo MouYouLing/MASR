@@ -53,12 +53,14 @@
         "action": "Click",
         "next": [
             "切换编队"
-        ]
+        ],
+        "post_delay": 1000
     },
     "切换编队": {
         "next": [
             "开始挑战"
-        ]
+        ],
+        "post_delay": 1000
     },
     "开始挑战": {
         "recognition": "OCR",
@@ -90,7 +92,7 @@
             85
         ],
         "green_mask": true,
-        "threshold": 0.83,
+        "threshold": 0.84,
         "action": "Click"
     },
     "是否没开倍速战斗": {
@@ -138,6 +140,9 @@
         ],
         "post_wait_freezes": 500,
         "action": "Click"
+    },
+    "挑战失败": {
+        "next": []
     },
     "再来一次": {
         "recognition": "OCR",
