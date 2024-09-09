@@ -15,7 +15,30 @@
         "green_mask": true,
         "times_limit": 3,
         "action": "Click",
-        "post_delay": 2000
+        "post_delay": 2500,
+        "next": [
+            "手机向下滑"
+        ]
+    },
+    "手机向下滑": {
+        "recognition": "OCR",
+        "expected": "智库",
+        "roi": [
+            750,
+            270,
+            1010,
+            760
+        ],
+        "action": "Swipe",
+        "end": true,
+        "end_offset": [
+            0,
+            200,
+            0,
+            0
+        ],
+        "duration": 250,
+        "post_wait_freezes": 300
     },
     "关闭界面": {
         "recognition": "TemplateMatch",
