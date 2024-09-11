@@ -72,5 +72,18 @@
             100
         ],
         "post_delay": 1000
+    },
+    "退出关卡": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "退出关卡",
+        "roi": [
+            340,
+            580,
+            460,
+            375
+        ],
+        "post_wait_freezes": 500,
+        "action": "Click"
     }
 }
