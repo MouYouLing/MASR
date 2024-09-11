@@ -8,6 +8,7 @@
             "接受协议",
             "加载中",
             "等待下载",
+            "更新成功",
             "需要更新",
             "登录中",
             "启动应用"
@@ -32,7 +33,9 @@
         "is_sub": true,
         "recognition": "OCR",
         "expected": "接受",
-        "action": "Click"
+        "action": "Click",
+        "post_delay": 2000,
+        "post_wait_freezes": 300
     },
     "需要更新": {
         "is_sub": true,
@@ -47,21 +50,20 @@
         "is_sub": true,
         "recognition": "OCR",
         "expected": "正在下载数据资源",
-        "next": [
-            "等待下载",
-            "更新成功"
-        ],
         "roi": [
             180,
             590,
             450,
             360
-        ]
+        ],
+        "post_delay": 5000
     },
     "更新成功": {
+        "is_sub": true,
         "recognition": "OCR",
         "expected": "确认",
-        "action": "Click"
+        "action": "Click",
+        "post_delay": 5000
     },
     "进入游戏": {
         "is_sub": true,
@@ -108,12 +110,13 @@
     "加载中": {
         "is_sub": true,
         "recognition": "OCR",
-        "expected": "数据加载中|正在检查数据更新|资源解包中|数值加载中",
+        "expected": "数据加载中|正在检查数据更新|资源解包中|数值加载中|应用补丁中|资源校验中",
         "roi": [
             180,
             590,
             450,
             360
-        ]
+        ],
+        "post_delay": 5000
     }
 }
