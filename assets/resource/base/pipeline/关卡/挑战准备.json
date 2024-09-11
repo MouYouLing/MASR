@@ -8,7 +8,7 @@
         "end": true,
         "end_offset": [
             0,
-            -200,
+            -150,
             0,
             0
         ],
@@ -29,7 +29,7 @@
         "end": true,
         "end_offset": [
             0,
-            200,
+            150,
             0,
             0
         ],
@@ -40,6 +40,142 @@
             830
         ],
         "duration": 300
+    },
+    "右栏向上滑": {
+        "is_sub": true,
+        "roi": [
+            550,
+            250,
+            780,
+            740
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "locate_720.png",
+            "locate_1080.png"
+        ],
+        "index": 1,
+        "action": "Swipe",
+        "end": true,
+        "end_offset": [
+            0,
+            -140,
+            0,
+            0
+        ],
+        "duration": 400,
+        "post_wait_freezes": 300
+    },
+    "右栏向下滑": {
+        "is_sub": true,
+        "roi": [
+            550,
+            250,
+            780,
+            740
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "locate_720.png",
+            "locate_1080.png"
+        ],
+        "index": 1,
+        "action": "Swipe",
+        "end": true,
+        "end_offset": [
+            0,
+            140,
+            0,
+            0
+        ],
+        "duration": 400,
+        "post_wait_freezes": 300
+    },
+    "切换到挑战列表": {
+        "is_sub": true,
+        "next": [
+            "点击挑战列表",
+            "是否左栏最顶端",
+            "左栏向下滑"
+        ]
+    },
+    "点击挑战列表": {
+        "recognition": "OCR",
+        "expected": "经验材料|信用点",
+        "roi": [
+            100,
+            150,
+            400,
+            830
+        ],
+        "action": "Click"
+    },
+    "是否左栏最顶端": {
+        "recognition": "OCR",
+        "expected": "饰品提取|位面饰品",
+        "roi": [
+            100,
+            150,
+            320,
+            120
+        ],
+        "next": [
+            "点击挑战列表",
+            "左栏向上滑"
+        ]
+    },
+    "前往挑战": {
+        "recognition": "OCR",
+        "expected": "回忆之蕾",
+        "roi": [
+            550,
+            270,
+            780,
+            740
+        ],
+        "next": [
+            "传送挑战",
+            "是否右栏最顶端",
+            "右栏向下滑"
+        ]
+    },
+    "是否右栏最顶端": {
+        "recognition": "OCR",
+        "expected": "筑梦边境",
+        "roi": [
+            550,
+            170,
+            320,
+            240
+        ],
+        "next": [
+            "传送挑战",
+            "右栏向上滑"
+        ]
+    },
+    "传送挑战": {
+        "recognition": "OCR",
+        "expected": "筑梦边境",
+        "roi": [
+            435,
+            170,
+            400,
+            445
+        ],
+        "target_offset": [
+            470,
+            -10,
+            0,
+            0
+        ],
+        "action": "Click",
+        "next": []
+    },
+    "通用挑战准备": {
+        "next": [
+            "准备挑战",
+            "传送中"
+        ]
     },
     "准备挑战": {
         "recognition": "OCR",
