@@ -16,16 +16,16 @@
     ],
     "resource": [
         {
-            "name": "官服",
+            "name": "安卓官服",
             "path": [
                 "{PROJECT_DIR}/resource/base"
             ]
         },
         {
-            "name": "B 服",
+            "name": "桌面官服",
             "path": [
                 "{PROJECT_DIR}/resource/base",
-                "{PROJECT_DIR}/resource/bilibili"
+                "{PROJECT_DIR}/resource/pc"
             ]
         }
     ],

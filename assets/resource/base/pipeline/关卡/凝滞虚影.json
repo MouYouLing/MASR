@@ -1,3 +1,38 @@
 {
-    "虚影挑战准备": {}
+    "虚影挑战准备": {
+        "next": [
+            "是否虚影界面",
+            "传送中"
+        ]
+    },
+    "是否虚影界面": {
+        "recognition": "OCR",
+        "expected": "凝滞虚影",
+        "roi": [
+            790,
+            70,
+            470,
+            95
+        ],
+        "next": [
+            "准备挑战"
+        ]
+    },
+    "是否需要点击普攻进战": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "attack_button_720.png"
+        ],
+        "action": "Click",
+        "roi": [
+            970,
+            460,
+            190,
+            175
+        ],
+        "green_mask": true,
+        "threshold": 0.65,
+        "post_delay": 2000
+    }
 }
