@@ -10,15 +10,6 @@
 
 </div>
 
-
-## 即刻开始
-
-TODO:
-
-- 打包为Release <https://github.com/MouYouLing/MASR/releases>
-- 撰写使用说明
-- GUI使用
-
 ## 功能&TODO
 
 - [x] 启动游戏
@@ -41,18 +32,46 @@ TODO:
     - [x] 领取无名勋礼
     - [ ] 领取列车补给凭证
 
-## 注意事项
+## 即刻开始
+
+下载地址：<https://github.com/MouYouLing/MASR/releases>
 
 - 开发和测试环境为蓝叠模拟器、1920*1080分辨率、240DPI，其他模拟器如有问题，可提交反馈
 - 请尽量保证实际运行分辨率不低于1280*720，并保持显示比例为16:9
 
 ## 生态共建
 
-MAA 正计划建设为一类项目，而非舟的单一软件。
+TODO:
 
-若您的项目依赖于 MaaFramework，我们欢迎您将它命名为 MaaXXX, MXA, MAX 等等。当然，这是许可而不是限制，您也可以自由选择其他与 MAA 无关的名字，完全取决于您自己的想法！
+- 打包为Release 
+- 撰写使用说明
+- GUI使用
 
-同时，我们也非常欢迎在 [最佳实践列表](https://github.com/MaaXYZ/MaaFramework#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5) 中添加上您的项目！
+## 其他说明
+
+- 安卓端开发和测试环境为蓝叠模拟器、1920*1080分辨率、240DPI
+- 桌面端运行时需保证游戏窗口始终处于最前端，以免影响识别结果
+- 添加 `-d` 参数可跳过交互直接运行任务，如 `./MaaPiCli.exe -d`
+- 反馈问题请附上日志文件 `debug/maa.log`，谢谢！
+
+## How to build
+
+**如果你要编译源码才看这节，否则直接 [下载](https://github.com/MouYouLing/MASR/releases) 即可**
+
+0. 完整克隆本项目及子项目
+
+    ```bash
+    git clone --recursive https://github.com/MouYouLing/MASR.git
+    ```
+
+1. 下载 MaaFramework 的 [Release 包](https://github.com/MaaXYZ/MaaFramework/releases)，解压到 `deps` 文件夹中
+2. 安装
+
+    ```python
+    python ./install.py
+    ```
+
+生成的二进制及相关资源文件在 `install` 目录下
 
 ## 鸣谢
 
