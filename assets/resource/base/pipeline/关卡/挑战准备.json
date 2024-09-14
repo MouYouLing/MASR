@@ -92,7 +92,6 @@
         "post_wait_freezes": 300
     },
     "切换到挑战列表": {
-        "is_sub": true,
         "next": [
             "点击挑战列表",
             "是否左栏最顶端",
@@ -108,7 +107,12 @@
             400,
             830
         ],
-        "action": "Click"
+        "action": "Click",
+        "next": [
+            "传送挑战",
+            "是否右栏最顶端",
+            "右栏向下滑"
+        ]
     },
     "是否左栏最顶端": {
         "recognition": "OCR",
@@ -432,7 +436,8 @@
         ],
         "action": "Click",
         "next": [
-            "结束挑战"
+            "结束挑战",
+            "关闭界面"
         ],
         "post_wait_freezes": 500
     },
