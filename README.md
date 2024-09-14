@@ -36,14 +36,13 @@
 
 下载地址：<https://github.com/MouYouLing/MASR/releases>
 
-- 开发和测试环境为蓝叠模拟器、1920*1080分辨率、240DPI，其他模拟器如有问题，可提交反馈
-- 请尽量保证实际运行分辨率不低于1280*720，并保持显示比例为16:9
+### Windows
 
-## 生态共建
+- 对于绝大部分用户，请下载 `MASR-win-x86_64-vXXX.zip`
+- 若确定自己的电脑是 arm 架构，请下载 `MASR-win-aarch64-vXXX.zip`
 
 TODO:
 
-- 打包为Release 
 - 撰写使用说明
 - GUI使用
 
