@@ -171,9 +171,23 @@
         "action": "Click",
         "next": []
     },
+    "视角切换": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            680,
+            430,
+            240,
+            80
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500
+    },
     "通用挑战准备": {
         "next": [
             "准备挑战",
+            "视角切换",
             "传送中"
         ]
     },
